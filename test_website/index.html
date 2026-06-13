@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Photographer Portfolio. Capturing moments, creating memories. Specializing in landscape, street, and conceptual photography.">
+    <meta name="keywords" content="Photographer, Portfolio, Photography, Landscapes, Portraits, Street Photography">
+    <title>Lens & Light | Professional Photographer</title>
+    
+    <!-- Open Graph for SEO & Link Previews -->
+    <meta property="og:title" content="Lens & Light | Professional Photographer">
+    <meta property="og:description" content="Capturing moments, creating memories. View my latest photography portfolio and get in touch.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Lens & Light Photography",
+      "description": "Professional Photographer Portfolio. Capturing moments, creating memories.",
+      "url": "https://www.example.com",
+      "image": "https://images.unsplash.com/photo-1452723312111-3a7d0cb0715b?auto=format&fit=crop&w=1920&q=80",
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Lens<span>&</span>Light</a>
+            <button class="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link btn-contact">Let's Talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h2 class="sub-heading">Through the Lens</h2>
+            <h1 class="main-heading">Capturing Not Just <br> <span class="accent-text">Moments</span>, But Magic.</h1>
+            <p class="hero-desc">Elevating reality through conceptual, street, and nature photography.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">Explore Portfolio</a>
+                <a href="#contact" class="btn btn-secondary">Hire Me</a>
+            </div>
+        </div>
+        <a href="#portfolio" class="scroll-down" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Portfolio/Gallery Section -->
+        <section id="portfolio" class="portfolio section">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <h2 class="ghost-title">Works</h2>
+                    <h3>Featured Projects</h3>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1 -->
+                    <article class="gallery-item fade-in">
+                        <div class="image-wrapper">
+                            <!-- PLEASE RENAME YOUR FIRST PHOTO TO 'photo-1.jpg' AND PLACE IT IN THE 'images' FOLDER -->
+                            <img src="images/photo-1.jpg" alt="Crystal ball reflecting an autumnal red flower forest" loading="lazy">
+                            <div class="item-overlay">
+                                <h4>Perspective Shift</h4>
+                                <span>Conceptual Nature</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gallery Item 2 -->
+                    <article class="gallery-item fade-in" style="transition-delay: 0.1s;">
+                        <div class="image-wrapper">
+                            <!-- PLEASE RENAME YOUR SECOND PHOTO TO 'photo-2.jpg' AND PLACE IT IN THE 'images' FOLDER -->
+                            <img src="images/photo-2.jpg" alt="Solitary tree reflecting on a calm water surface at dawn" loading="lazy">
+                            <div class="item-overlay">
+                                <h4>Solitude</h4>
+                                <span>Landscapes</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gallery Item 3 -->
+                    <article class="gallery-item fade-in" style="transition-delay: 0.2s;">
+                        <div class="image-wrapper">
+                            <!-- PLEASE RENAME YOUR THIRD PHOTO TO 'photo-3.jpg' AND PLACE IT IN THE 'images' FOLDER -->
+                            <img src="images/photo-3.jpg" alt="Hands holding a camera with a glowing lens in the dark" loading="lazy">
+                            <div class="item-overlay">
+                                <h4>Captured Light</h4>
+                                <span>Experimental</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gallery Item 4 -->
+                    <article class="gallery-item fade-in" style="transition-delay: 0.3s;">
+                        <div class="image-wrapper">
+                            <!-- PLEASE RENAME YOUR FOURTH PHOTO TO 'photo-4.jpg' AND PLACE IT IN THE 'images' FOLDER -->
+                            <img src="images/photo-4.jpg" alt="Low angle view on a city street holding a camera to a puddle reflection" loading="lazy">
+                            <div class="item-overlay">
+                                <h4>Urban Reflections</h4>
+                                <span>Street Photography</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gallery Item 5 -->
+                    <article class="gallery-item fade-in" style="transition-delay: 0.4s;">
+                        <div class="image-wrapper">
+                            <!-- PLEASE RENAME YOUR FIFTH PHOTO TO 'photo-5.jpg' AND PLACE IT IN THE 'images' FOLDER -->
+                            <img src="images/photo-5.jpg" alt="Perspective view from wooden benches extending toward a city bridge at dusk" loading="lazy">
+                            <div class="item-overlay">
+                                <h4>Leading Lines</h4>
+                                <span>Architecture / City</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-5 fade-in">
+                    <a href="#" class="btn btn-outline">View Entire Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-image fade-in">
+                        <div class="img-frame">
+                            <img src="https://images.unsplash.com/photo-1554046920-90dcac824bdc?auto=format&fit=crop&w=800&q=80" alt="Portrait of the Photographer" loading="lazy">
+                        </div>
+                        <div class="stats-box">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                    <div class="about-content fade-in">
+                        <h2 class="ghost-title">Bio</h2>
+                        <h3>Story behind the lens</h3>
+                        <div class="title-line"></div>
+                        <p>Hello, I'm Alex. A passionate photographer based in the creative heart of the city. I believe that every image should tell a compelling story, one that transcends the visual and touches an emotion.</p>
+                        <p>Specializing in dramatic landscapes, intimate portraits, and spontaneous street photography, my approach is always centered around the interplay of light and subjects. Let's create something timeless.</p>
+                        
+                        <div class="skills-wrap">
+                            <div class="skill">
+                                <h5>Adobe Lightroom</h5>
+                                <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="skill">
+                                <h5>Retouching</h5>
+                                <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+                            </div>
+                            <div class="skill">
+                                <h5>Analog Film</h5>
+                                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-title text-center fade-in">
+                    <h2 class="ghost-title">Offers</h2>
+                    <h3>What I Do</h3>
+                    <div class="title-line mx-auto"></div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                        </div>
+                        <h4>Commercial Photography</h4>
+                        <p>High-end imagery for brands, products, and advertising campaigns designed to captivate your audience.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in" style="transition-delay: 0.1s;">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h4>Portrait Sessions</h4>
+                        <p>Individual, family, or corporate portraits that reflect genuine personality and character.</p>
+                    </div>
+                    
+                    <div class="service-card fade-in" style="transition-delay: 0.2s;">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 14 5.5-5.5a2 2 0 0 1 2.828 0L16 14"></path><path d="m11.5 11.5 2-2a2 2 0 0 1 2.828 0L22 15"></path><circle cx="7.5" cy="5.5" r="1.5"></circle><path d="M4 21h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"></path></svg>
+                        </div>
+                        <h4>Art & Prints</h4>
+                        <p>Purchase exclusive fine art prints from my personal landscape and street photography collections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info fade-in">
+                        <div class="section-title">
+                            <h2 class="ghost-title">Connect</h2>
+                            <h3>Let's create together</h3>
+                            <div class="title-line"></div>
+                        </div>
+                        <p class="mb-4">Whether you have a specific project in mind or just want to say hi, feel free to reach out. I'm currently available for freelance projects.</p>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div>
+                                <h6>Email Me</h6>
+                                <p><a href="mailto:hello@lensandlight.com">hello@lensandlight.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h6>Call Me</h6>
+                                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container fade-in">
+                        <form id="contactForm" class="contact-form" action="#" method="POST" onsubmit="event.preventDefault();">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">Lens<span>&</span>Light</a>
+                <p>Capturing the ephemeral moments that define our lives. Professional photography services globally available.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                    <a href="#" aria-label="Behance"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13v-3a2.5 2.5 0 0 1 5 0v3m-5 0h5m-5 0v3a2.5 2.5 0 0 0 5 0v-3m2-8h-5"></path><path d="M21 21v-3a2.5 2.5 0 0 0-5 0v3"></path></svg></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#portfolio">Our Work</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Copyright info</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Lens & Light Photography. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
