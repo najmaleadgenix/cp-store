@@ -1,0 +1,52 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(200, 188, 188);
+    padding: 10px;
+}
+.logo{
+    width: 80px;
+}
+li{
+    list-style: none;
+    font-size: 20px;
+}
+li:hover{
+    color:blue;
+    cursor: pointer;
+}
+.menu_container{
+    display: flex;
+    gap: 15px;
+}
+.banner_img{
+    width:600px;
+}
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+.left_banner{
+    padding: 15px;
+    line-height: 2;
+}
+.btn{
+    width: 150px;
+    cursor: pointer;
+    padding:15px 20px;
+    border: none;
+}
+.btn_hire{
+    background-color:rgb(173, 119, 224);
+}
+.btn_project{
+    background-color: rgb(247, 214, 173);
+}

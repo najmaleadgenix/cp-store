@@ -1,0 +1,10 @@
+body{
+    background-color: #1A1A1A;
+    color:white;
+}
+.menu:hover{
+    color: rgb(53, 167, 233)!important;
+}
+.placeholder-white{
+    color:white;
+}
