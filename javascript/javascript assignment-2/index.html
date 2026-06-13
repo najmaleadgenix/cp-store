@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cocktail</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assignment.css">
+  </head>
+  <body class="bg-light">
+    <h1 class="text-center mt-5 fw-bold">Explore Cocktails & Drinks</h1>
+
+    <div class="input-group mb-3 w-50 mx-auto">
+      <input
+        type="text"
+        id="inputSearch"
+        class="form-control mt-4 border border-2 border-secondary-subtle"
+        placeholder="Search Your Drink..."
+        aria-label="Recipient’s username"
+        aria-describedby="button-addon2"
+      />
+      <button class="btn mt-4 btn-primary" type="button" id="button-addon2">
+        Search
+      </button>
+    </div>
+
+    <br />
+
+    <div class="container text-center my-5">
+                  <h1 id="notFoundMessage"
+      class="col-12 text-danger fw-bold text-center"></h1>
+      <div class="row">
+        <div id="cardsContainer" class="col-12 col-lg-8 col-md-6 cardsContainer d-flex flex-wrap gap-3 text-center">
+          
+        </div>
+
+        <div
+          id="cartContainer"
+          class="col-12 col-lg-4 col-md-6 cartContainer border"
+        >
+      
+           <h3 class="fw-semibold"> Total Cart: <span id="cartCount">0</span></h3>
+            <div class="d-flex justify-content-around">
+                <h4>SL</h4>
+                <h4>Img</h4>
+                <h4>Name</h4>
+            </div>
+
+           <div id="cartContant" class="cartContant">
+
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+     <div class="modal" id="drinkModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="p-2"><img id="modalimg" class="img-fluid rounded" src="" alt="drink image"></div>
+        <p>Details</p>
+        <h4>Category: <span  id="drinkCategory"></span> </h4>
+        <h4>Alcoholic: <span id="drinkAlcho"></span></h4>
+        <p>Instruction: <span id="drinkInstruction"></span></p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    <script src="assignment.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
