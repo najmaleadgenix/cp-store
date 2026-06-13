@@ -1,0 +1,105 @@
+/* Custom Design System for Naziba Tabassum Portfolio */
+
+:root {
+    --primary: #6366f1;
+    --secondary: #a855f7;
+    --accent: #ec4899;
+    --dark: #09090b;
+    --dark-lighter: #18181b;
+}
+
+body {
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(24, 24, 27, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2d2d30;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+}
+
+/* Mobile Nav Toggle */
+.mobile-nav {
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.mobile-nav.open {
+    transform: translateX(0);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Hover Shine Effect */
+.hover-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-shine::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    transition: all 0.7s;
+}
+
+.hover-shine:hover::after {
+    left: 120%;
+}

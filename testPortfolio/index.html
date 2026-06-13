@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naziba Tabassum | Full Stack Developer</title>
+    <meta name="description" content="Personal portfolio of Naziba Tabassum, a passionate Full Stack Developer focused on clean UI and scalable backend solutions.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        accent: '#ec4899',
+                        dark: '#09090b',
+                        'dark-lighter': '#18181b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark text-slate-300 font-sans selection:bg-primary/30 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-outfit font-bold text-white tracking-tight">
+                Naziba<span class="text-primary">.</span>T
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6">
+                 <a href="#contact" class="px-5 py-2.5 bg-primary text-white rounded-full hover:bg-primary/90 hover:scale-105 transition-all text-sm font-semibold shadow-lg shadow-primary/20">
+                    Contact Me
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-white p-2">
+                <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="block"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass mt-4 mx-4 rounded-2xl p-6 absolute top-full left-0 right-0">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="text-white font-medium">About</a>
+                <a href="#skills" class="text-white font-medium">Skills</a>
+                <a href="#projects" class="text-white font-medium">Projects</a>
+                <a href="#experience" class="text-white font-medium">Experience</a>
+                <a href="#contact" class="text-white font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Glows -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 blur-[150px] rounded-full"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 blur-[150px] rounded-full"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center z-10">
+            <div class="inline-block px-4 py-1.5 rounded-full glass border border-white/5 text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6 animate-float">
+                Available for opportunities
+            </div>
+            <h1 class="text-5xl md:text-8xl font-outfit font-bold text-white mb-6 leading-tight">
+                Crafting digital <br><span class="text-gradient">experiences</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Hi, I'm <span class="text-white font-medium">Naziba Tabassum</span>—a Full Stack Developer student focused on building products that humans actually love to use.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="w-full sm:w-auto px-10 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary/90 hover:scale-105 transition-all shadow-lg shadow-primary/20">
+                    My Work
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-10 py-4 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition-all">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative reveal">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <div class="aspect-square rounded-3xl overflow-hidden glass p-4 rotate-2 hover:rotate-0 transition-transform duration-700">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80&w=800" alt="Work Desk" class="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-outfit font-bold text-white mb-6">Building with Passion</h2>
+                    <p class="text-slate-400 mb-6 leading-relaxed text-lg">
+                        I am a Computer Science student and an aspiring Full Stack Developer from Bangladesh. My goal is to build software that is not only functional but also intuitive and visually compelling.
+                    </p>
+                    <p class="text-slate-400 mb-8 leading-relaxed text-lg">
+                        I love diving into complex problems and finding elegant solutions. I'm currently expanding my knowledge in system architecture and cloud services, always curious and ready to grow.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-6 rounded-2xl glass border border-white/5">
+                            <h4 class="text-3xl font-bold text-white mb-1">Authentic</h4>
+                            <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Approach</p>
+                        </div>
+                        <div class="p-6 rounded-2xl glass border border-white/5">
+                            <h4 class="text-3xl font-bold text-white mb-1">Fast</h4>
+                            <p class="text-xs text-slate-500 font-bold uppercase tracking-widest">Learner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-dark-lighter/50 reveal">
+        <div class="max-w-6xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-outfit font-bold text-white mb-4">Toolkit</h2>
+            <p class="text-slate-400 max-w-xl mx-auto">Selected technologies I've been mastering recently.</p>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Frontend Card -->
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-primary/40 transition-all group hover-shine">
+                <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div> HTML5 / CSS3</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div> JavaScript (ES6+)</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div> React.js</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-primary/40"></div> Tailwind CSS</li>
+                </ul>
+            </div>
+            <!-- Backend Card -->
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-secondary/40 transition-all group hover-shine">
+                <div class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">Backend</h3>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-secondary/40"></div> Node.js</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-secondary/40"></div> Express</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-secondary/40"></div> REST APIs</li>
+                </ul>
+            </div>
+            <!-- Database Card -->
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-accent/40 transition-all group hover-shine">
+                <div class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">Database</h3>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent/40"></div> MongoDB</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent/40"></div> MySQL / SQL</li>
+                </ul>
+            </div>
+            <!-- Tools Card -->
+            <div class="p-8 rounded-3xl glass border border-white/5 hover:border-white/20 transition-all group hover-shine">
+                <div class="w-14 h-14 bg-white/5 text-slate-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-4">Tools</h3>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-slate-600"></div> Git / GitHub</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-slate-600"></div> VS Code</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-slate-600"></div> Postman</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 reveal">
+        <div class="max-w-6xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-outfit font-bold text-white mb-4">Recent Projects</h2>
+            <p class="text-slate-400 max-w-xl mx-auto">Check out some of my concrete work.</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="group relative bg-dark-lighter rounded-3xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all flex flex-col">
+                <div class="aspect-video bg-white/5 overflow-hidden">
+                    <img src="assets/habitforge.png" alt="HabitForge Tracker" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-[10px] px-2.5 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full font-bold uppercase tracking-wider">React</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-white/5 text-slate-400 border border-white/10 rounded-full font-bold uppercase tracking-wider">Tailwind</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors">HabitForge</h3>
+                    <p class="text-sm text-slate-400 mb-8 leading-relaxed">
+                        A productivity tool designed to help users establish and maintain daily routines. Features streak tracking and visual progress charts.
+                    </p>
+                    <div class="mt-auto flex items-center justify-between">
+                        <a href="#" class="text-white hover:text-primary transition-colors flex items-center gap-2 text-sm font-bold">
+                            Live Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-3-7-3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group relative bg-dark-lighter rounded-3xl overflow-hidden border border-white/5 hover:border-secondary/30 transition-all flex flex-col">
+                <div class="aspect-video bg-white/5 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544640808-32ca72ac7f67?auto=format&fit=crop&q=80&w=800" alt="Lumina Bookshelves" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-[10px] px-2.5 py-1 bg-secondary/10 text-secondary border border-secondary/20 rounded-full font-bold uppercase tracking-wider">Node.js</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-white/5 text-slate-400 border border-white/10 rounded-full font-bold uppercase tracking-wider">MongoDB</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-secondary transition-colors">Lumina Books</h3>
+                    <p class="text-sm text-slate-400 mb-8 leading-relaxed">
+                        Digital library ecosystem allowing users to organize their physical book collections, share reviews, and receive AI-driven recommendations.
+                    </p>
+                    <div class="mt-auto flex items-center justify-between">
+                        <a href="#" class="text-white hover:text-secondary transition-colors flex items-center gap-2 text-sm font-bold">
+                            Live Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-3-7-3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group relative bg-dark-lighter rounded-3xl overflow-hidden border border-white/5 hover:border-accent/30 transition-all flex flex-col">
+                <div class="aspect-video bg-white/5 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=800" alt="StatDash App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-8 flex-1 flex flex-col">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-[10px] px-2.5 py-1 bg-accent/10 text-accent border border-accent/20 rounded-full font-bold uppercase tracking-wider">JS ES6</span>
+                        <span class="text-[10px] px-2.5 py-1 bg-white/5 text-slate-400 border border-white/10 rounded-full font-bold uppercase tracking-wider">API</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">Stat Dash</h3>
+                    <p class="text-sm text-slate-400 mb-8 leading-relaxed">
+                        A real-time data dashboard using custom visualization components for analyzing environmental metrics from worldwide public sensors.
+                    </p>
+                    <div class="mt-auto flex items-center justify-between">
+                        <a href="#" class="text-white hover:text-accent transition-colors flex items-center gap-2 text-sm font-bold">
+                            Live Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-3-7-3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="experience" class="py-24 bg-dark-lighter/30 reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-outfit font-bold text-white mb-12 text-center uppercase tracking-widest text-sm opacity-50">Academic Path</h2>
+            <div class="space-y-12">
+                <!-- University -->
+                <div class="flex gap-8 relative group">
+                    <div class="flex-none absolute left-0 top-0 bottom-0 w-px bg-white/5 ml-[15px]"></div>
+                    <div class="flex-none w-8 h-8 rounded-full bg-dark border-2 border-primary ring-4 ring-primary/10 flex items-center justify-center z-10 transition-all group-hover:scale-110">
+                        <div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+                    </div>
+                    <div class="pb-12">
+                        <span class="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-2 block">2022 - Present</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">B.Sc. in Computer Science & Engineering</h3>
+                        <p class="text-slate-400 font-medium mb-3">University of Information Technology and Sciences (UITS)</p>
+                        <p class="text-slate-500 text-sm leading-relaxed max-w-xl">
+                            Specializing in web technologies and software engineering. Currently maintaining a strong focus on advanced data structures and modern application design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Course/Bootcamp -->
+                <div class="flex gap-8 relative group">
+                    <div class="flex-none w-8 h-8 rounded-full bg-dark border-2 border-slate-700 flex items-center justify-center z-10 group-hover:border-secondary transition-all">
+                        <div class="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-secondary"></div>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-secondary tracking-[0.3em] uppercase mb-2 block">2023</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Complete Web Development Mastery</h3>
+                        <p class="text-slate-400 font-medium mb-3">Programming Hero Boot Camp</p>
+                        <ul class="text-slate-500 text-sm list-disc pl-5 space-y-1">
+                            <li>Hands-on experience with MERN stack</li>
+                            <li>600+ hours of coding & project building</li>
+                            <li>Focus on responsive designs and clean architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 reveal">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-outfit font-bold text-white mb-8 leading-tight">Let's build <br>something <span class="text-primary italic font-serif">extraordinary.</span></h2>
+                    <p class="text-slate-400 text-lg mb-12 leading-relaxed">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <a href="mailto:naziba.tabassum@uits.edu" class="group flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-2xl glass flex items-center justify-center group-hover:bg-primary/20 transition-all text-primary shadow-lg shadow-primary/5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-1">Email Me</h4>
+                                <p class="text-white text-lg font-medium group-hover:text-primary transition-colors">naziba.tabassum@email.com</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex gap-4 pt-10">
+                            <a href="#" class="w-12 h-12 rounded-xl glass flex items-center justify-center hover:text-primary transition-all hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-3-7-3"/></svg>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl glass flex items-center justify-center hover:text-primary transition-all hover:-translate-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass rounded-3xl p-10 border border-white/5 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-[60px] rounded-full"></div>
+                    <form class="space-y-6 relative z-10">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase tracking-wider pl-1">Name</label>
+                                <input type="text" placeholder="Naziba Tabassum" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/10 transition-all placeholder:text-slate-600">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-500 uppercase tracking-wider pl-1">Email</label>
+                                <input type="email" placeholder="example@email.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/10 transition-all placeholder:text-slate-600">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-wider pl-1">Message</label>
+                            <textarea rows="5" placeholder="Let's build a new world..." class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:outline-none focus:ring-2 focus:ring-primary/40 focus:bg-white/10 transition-all resize-none placeholder:text-slate-600"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-bold hover:bg-primary/90 transition-all shadow-xl shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                            Send Message
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+             <a href="#" class="text-xl font-outfit font-bold text-white mb-6 inline-block">
+                Naziba<span class="text-primary">.</span>T
+            </a>
+            <p class="text-slate-500 text-sm mb-4">© 2024 Naziba Tabassum. Handcrafted with passion.</p>
+            <div class="flex justify-center gap-8 text-xs text-slate-600 uppercase tracking-widest font-bold">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
