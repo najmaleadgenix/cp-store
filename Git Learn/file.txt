@@ -1,0 +1,5 @@
+hello everyone
+
+working directory ---> git add filename
+Git staging area ----> git commit
+repository
